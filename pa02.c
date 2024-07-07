@@ -1,8 +1,3 @@
-/*
-I Ceasar Muscatella (ce447461) affirm that this program is entirely my own work and that I have neither developed my code with any another person, nor copied any code from any other person, nor permitted my code to be copied 
-or otherwise used by any other person, nor have I copied, modified, or otherwise used programs created by others. I acknowledge that any violation of the above terms will be treated as academic dishonesty.
-*/
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -111,7 +106,7 @@ int main(int argc, char *argv[]) {
     unsigned char *data_array = (unsigned char *)padded_data;
     int result_checksum = calculate_checksum(data_array, strlen(padded_data), checksum_bits);
 
-    printf("\n%s\n%2d bit checksum is %08lx for all %4lu chars\n",
+    printf("\n%s\n%2d bit checksum is %x for all %lu chars\n",
            padded_data, checksum_bits, result_checksum, strlen(padded_data));
 
     return 0;
